@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #1F1E1C;
+  color: #e8e6e1;
+}
+
+:root {
+  --bg-primary: #1F1E1C;
+  --bg-secondary: #262420;
+  --bg-tertiary: #302E29;
+  --bg-hover: #3A372F;
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.14);
+  --text-primary: #F2EEE3;
+  --text-secondary: #B7B2A3;
+  --text-muted: #807A6B;
+  --brand: #D97757;
+  --brand-light: #E8A185;
+  --brand-dark: #BE5D3D;
+  --green: #5E9E7E;
+  --amber: #C2895A;
+  --red: #D85A30;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+.prose-dark {
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 14px;
+}
+.prose-dark code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: rgba(217,119,87,0.14);
+  color: var(--brand-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.prose-dark pre {
+  background: var(--bg-secondary);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+.prose-dark pre code {
+  background: none;
+  padding: 0;
+  color: var(--text-primary);
+}
+.prose-dark p { margin: 0 0 8px; }
+.prose-dark ul, .prose-dark ol { margin: 6px 0 8px 18px; }
+.prose-dark li { margin-bottom: 3px; }
+.prose-dark h1, .prose-dark h2, .prose-dark h3 {
+  font-weight: 500;
+  margin: 12px 0 6px;
+  color: var(--text-primary);
+}
+.prose-dark strong { font-weight: 500; color: var(--text-primary); }
+.prose-dark blockquote {
+  border-left: 2px solid var(--brand);
+  padding-left: 12px;
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+.prose-dark table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; }
+.prose-dark th { border-bottom: 0.5px solid var(--border-strong); padding: 6px 10px; text-align: left; font-weight: 500; color: var(--text-secondary); font-size: 11px; }
+.prose-dark td { border-bottom: 0.5px solid var(--border); padding: 6px 10px; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
